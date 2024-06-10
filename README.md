@@ -58,7 +58,7 @@ type GiftCard = {
   state: "active" | "archived";
   allowedAmount: number;
   consumedAmount: number;
-  grantables: {
+  beneficiaries: {
     id: number;
     type: "user" | "companion" | "child";
     firstName: string;

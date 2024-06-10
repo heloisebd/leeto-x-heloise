@@ -9,7 +9,7 @@
       "state": "archived",
       "allowedAmount": 120,
       "consumedAmount": 120,
-      "grantables": [
+      "beneficiaries": [
         {
           "id": 1,
           "type": "user",
@@ -30,7 +30,7 @@
       "state": "archived",
       "allowedAmount": 60,
       "consumedAmount": 60,
-      "grantables": [
+      "beneficiaries": [
         {
           "id": 1,
           "type": "user",
@@ -60,7 +60,7 @@
       "state": "active",
       "allowedAmount": 150,
       "consumedAmount": 100,
-      "grantables": [
+      "beneficiaries": [
         {
           "id": 1,
           "type": "user",
@@ -81,7 +81,7 @@
       "state": "active",
       "allowedAmount": 100,
       "consumedAmount": 50,
-      "grantables": [
+      "beneficiaries": [
         {
           "id": 1,
           "type": "user",
@@ -111,7 +111,7 @@
       "state": "active",
       "allowedAmount": 100,
       "consumedAmount": 80,
-      "grantables": [
+      "beneficiaries": [
         {
           "id": 1,
           "type": "user",
@@ -150,7 +150,7 @@
       "state": "active",
       "allowedAmount": 50,
       "consumedAmount": 0,
-      "grantables": [
+      "beneficiaries": [
         {
           "id": 3,
           "type": "child",
@@ -171,7 +171,7 @@
       "state": "active",
       "allowedAmount": 120,
       "consumedAmount": 35,
-      "grantables": [
+      "beneficiaries": [
         {
           "id": 1,
           "type": "user",
