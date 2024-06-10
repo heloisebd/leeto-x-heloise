@@ -1,0 +1,189 @@
+{
+  "gift-cards": [
+    {
+      "id": "1",
+      "name": "Carte cadeaux Noël 2022",
+      "openingDate": "2022-12-01",
+      "closingDate": "2023-12-01",
+      "state": "archived",
+      "allowedAmount": 120,
+      "consumedAmount": 120,
+      "grantables": [
+        {
+          "id": 1,
+          "type": "user",
+          "firstName": "Geralt",
+          "consumption": {
+            "allowedAmount": 120,
+            "consumedAmount": 120
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Carte cadeaux vacances d‘été",
+      "openingDate": "2023-06-01",
+      "closingDate": "2023-10-01",
+      "state": "archived",
+      "allowedAmount": 60,
+      "consumedAmount": 60,
+      "grantables": [
+        {
+          "id": 1,
+          "type": "user",
+          "firstName": "Geralt",
+          "consumption": {
+            "allowedAmount": 30,
+            "consumedAmount": 30
+          }
+        },
+        {
+          "id": 2,
+          "type": "companion",
+          "firstName": "Yennefer",
+          "consumption": {
+            "allowedAmount": 30,
+            "consumedAmount": 30
+          }
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Carte cadeaux Noël 2023",
+      "openingDate": "2023-12-01",
+      "closingDate": "2024-12-01",
+      "state": "active",
+      "allowedAmount": 150,
+      "consumedAmount": 100,
+      "grantables": [
+        {
+          "id": 1,
+          "type": "user",
+          "firstName": "Geralt",
+          "consumption": {
+            "allowedAmount": 150,
+            "consumedAmount": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Carte cadeaux culture & sport",
+      "openingDate": "2024-02-12",
+      "closingDate": "2024-10-01",
+      "state": "active",
+      "allowedAmount": 100,
+      "consumedAmount": 50,
+      "grantables": [
+        {
+          "id": 1,
+          "type": "user",
+          "firstName": "Geralt",
+          "consumption": {
+            "allowedAmount": 50,
+            "consumedAmount": 20
+          }
+        },
+        {
+          "id": 2,
+          "type": "companion",
+          "firstName": "Yennefer",
+          "consumption": {
+            "allowedAmount": 50,
+            "consumedAmount": 30
+          }
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Carte cadeaux famille",
+      "openingDate": "2024-03-03",
+      "closingDate": "2024-11-11",
+      "state": "active",
+      "allowedAmount": 100,
+      "consumedAmount": 80,
+      "grantables": [
+        {
+          "id": 1,
+          "type": "user",
+          "firstName": "Geralt",
+          "consumption": {
+            "allowedAmount": 50,
+            "consumedAmount": 30
+          }
+        },
+        {
+          "id": 2,
+          "type": "companion",
+          "firstName": "Yennefer",
+          "consumption": {
+            "allowedAmount": 25,
+            "consumedAmount": 25
+          }
+        },
+        {
+          "id": 3,
+          "type": "child",
+          "firstName": "Cirilla",
+          "consumption": {
+            "allowedAmount": 25,
+            "consumedAmount": 25
+          }
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Carte cadeaux naissance",
+      "openingDate": "2024-04-01",
+      "closingDate": "2025-04-01",
+      "state": "active",
+      "allowedAmount": 50,
+      "consumedAmount": 0,
+      "grantables": [
+        {
+          "id": 3,
+          "type": "child",
+          "firstName": "Cirilla",
+          "consumption": {
+            "allowedAmount": 50,
+            "consumedAmount": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Carte cadeaux jeux vidéo",
+      "openingDate": "2024-05-01",
+      "closingDate": "2025-05-01",
+      "state": "active",
+      "allowedAmount": 120,
+      "consumedAmount": 35,
+      "grantables": [
+        {
+          "id": 1,
+          "type": "user",
+          "firstName": "Geralt",
+          "consumption": {
+            "allowedAmount": 60,
+            "consumedAmount": 35
+          }
+        },
+        {
+          "id": 2,
+          "type": "companion",
+          "firstName": "Yennefer",
+          "consumption": {
+            "allowedAmount": 60,
+            "consumedAmount": 0
+          }
+        }
+      ]
+    }
+  ]
+}
