@@ -79,6 +79,11 @@ type GiftCard = {
 
 Le code devra être accessible sur un repository GitHub public.
 
+## Ce qui sera évalué
+
+- Le respect des maquettes
+- La qualité du code (lisibilité, maintenabilité et performance)
+
 > 📒 Nos guidelines sont accessibles en ligne si tu souhaites t'en inspirer : https://leeto-front-end-guidelines.netlify.app
 
-> ✉️ Si tu as la moindre question, n'hésite pas à me contacter : kevin@leeto.co
+> ✉️ Si tu as la moindre question, n'hésite pas à nous contacter.
