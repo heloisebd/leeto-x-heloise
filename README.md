@@ -24,21 +24,34 @@ Le périmètre concerne uniquement la consultation et non la consommation de la 
   - une date d'expiration
   - un état de consommation (en euros)
   - une liste de bénéficiaires (moi-même, mon/ma conjoint(e) et/ou mes enfants)
-- La page de listing doit pouvoir afficher les cartes cadeaux actives ou archivées via un système d'onglets
+- La page de listing doit pouvoir afficher les cartes cadeaux actives ou clôturées via un système d'onglets
 
 ## Ressources
 
 ### Maquettes
 
-_TODO_
+https://www.figma.com/design/pHiuVYjR31D0tUkavDIsTs/front-end-case?node-id=1-277
 
 ### API
 
-#### GiftCard Type
+#### Démarrer le serveur
+
+1. Cloner ce repository
+2. Installer les dépendances : `yarn install`
+3. Démarrer le serveur : `yarn start`
+
+#### Endpoints
+
+- Liste des cartes cadeaux actives : `GET http://localhost:3001/gift-cards?state=active`
+- Liste des cartes cadeaux clôturées : `GET http://localhost:3001/gift-cards?state=archived`
+- Détail d'une carte cadeau : `GET http://localhost:3001/gift-cards/:id`
+
+#### Types
 
 ```typescript
 type GiftCard = {
   id: number;
+  description: string;
   name: string;
   openingDate: string;
   closingDate: string;
@@ -56,12 +69,6 @@ type GiftCard = {
   }[];
 };
 ```
-
-#### Endpoints
-
-- Liste des cartes cadeaux actives : `GET /gift-cards?state=active`
-- Liste des cartes cadeaux archivées : `GET /gift-cards?state=archived`
-- Détail d'une carte cadeau : `GET /gift-cards/:id`
 
 ## Bonus
 
