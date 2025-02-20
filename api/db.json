@@ -1,7 +1,7 @@
 {
   "gift-cards": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Carte cadeaux Noël 2022",
       "description": "Votre CSE vous offre une carte cadeaux pour Noël.",
       "openingDate": "2022-12-01",
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Carte cadeaux vacances d‘été",
       "description": "Votre CSE vous offre une carte cadeaux pour vos vacances d‘été.",
       "openingDate": "2023-06-01",
@@ -52,7 +52,7 @@
       ]
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Carte cadeaux Noël 2023",
       "description": "Votre CSE vous offre une carte cadeaux pour Noël.",
       "openingDate": "2023-12-01",
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Carte cadeaux culture & sport",
       "description": "Votre CSE vous offre une carte cadeaux pour la culture et le sport.",
       "openingDate": "2024-02-12",
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Carte cadeaux famille",
       "description": "Votre CSE vous offre une carte cadeaux pour toute la famille.",
       "openingDate": "2024-03-03",
@@ -142,7 +142,7 @@
       ]
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Carte cadeaux naissance",
       "description": "Votre CSE vous offre une carte cadeaux pour la naissance de votre enfant.",
       "openingDate": "2024-04-01",
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Carte cadeaux jeux vidéo",
       "description": "Votre CSE vous offre une carte cadeaux pour les jeux vidéo.",
       "openingDate": "2024-05-01",
