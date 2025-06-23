@@ -17,9 +17,9 @@ const HeaderBlock = ({ icon, title, metaInfo = [] }: Props) => (
       </h1>
 
       {metaInfo.length > 0 ? (
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-4">
           {metaInfo.map(({ icon, label }) => (
-            <div className="flex items-center gap-1 text-sm">
+            <div key={label} className="flex items-center gap-2 text-sm">
               <Icon icon={icon} className="shrink-0" />
               <span className="text-slate-600">{label}</span>
             </div>

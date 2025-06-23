@@ -18,7 +18,10 @@ const ConsumptionByBeneficiaryCard = ({ beneficiaries = [] }: Props) => {
         <div className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
           {others.length > 0
             ? others.map((beneficiary) => (
-                <BeneficiaryConsumption beneficiary={beneficiary} />
+                <BeneficiaryConsumption
+                  key={beneficiary.id}
+                  beneficiary={beneficiary}
+                />
               ))
             : null}
         </div>
