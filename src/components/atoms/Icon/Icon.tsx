@@ -5,6 +5,7 @@ import Clock from '../../../design-tokens/icons/Clock';
 import GiftCard from '../../../design-tokens/icons/GiftCard';
 import StackedLineChart from '../../../design-tokens/icons/StackedLineChart';
 import Family from '../../../design-tokens/icons/Family';
+import classNames from 'classnames';
 
 export const iconsMap = {
   'arrow-left': <ArrowLeft />,
@@ -17,19 +18,33 @@ export const iconsMap = {
 
 export type IconKey = keyof typeof iconsMap;
 
-interface Props {
-  icon: IconKey;
-  size?: 'default' | 'large';
-}
-
 const sizes = {
+  small: 'h-3 w-3',
   default: 'h-4 w-4',
   large: 'h-6 w-6',
-};
+} as const satisfies Record<string, string>;
 
-const Icon = ({ icon, size = 'default' }: Props) => {
+type Size = keyof typeof sizes;
+
+interface Props {
+  icon: IconKey;
+  size?: Size;
+  className?: string;
+}
+
+const Icon = ({ icon, size = 'default', className = '' }: Props) => {
   if (!iconsMap[icon]) return null;
-  return <div className={sizes[size]}>{iconsMap[icon]}</div>;
+  return (
+    <div
+      className={classNames(
+        'inline-flex items-center justify-center',
+        sizes[size],
+        className,
+      )}
+    >
+      {iconsMap[icon]}
+    </div>
+  );
 };
 
 export default Icon;

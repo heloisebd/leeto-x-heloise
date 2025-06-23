@@ -22,3 +22,10 @@ export const SizeLarge: Story = {
     size: 'large',
   },
 };
+
+export const SizeSmall: Story = {
+  args: {
+    icon: 'arrow-left',
+    size: 'small',
+  },
+};

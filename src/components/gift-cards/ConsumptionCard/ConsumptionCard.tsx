@@ -1,0 +1,32 @@
+import formatPrice from '../../../utils/formatPrice';
+import ProgressBar from '../../molecules/ProgressBar/ProgressBar';
+
+interface Props {
+  allowedAmount: number;
+  consumedAmount: number;
+}
+
+const ConsumptionCard = ({ allowedAmount, consumedAmount }: Props) => {
+  const remainingAmount = Math.max(allowedAmount - consumedAmount, 0);
+  const consumedAmountPercentage = (consumedAmount * 100) / allowedAmount;
+
+  return (
+    <div className="flex items-end gap-6">
+      <div className="flex flex-col gap-1 text-slate-800">
+        <span className="text-xl font-semibold sm:text-2xl">
+          {formatPrice(remainingAmount)}
+        </span>
+        <span className="text-xs font-medium sm:text-sm">disponibles</span>
+      </div>
+      <div className="flex flex-auto flex-col gap-2">
+        <legend className="text-xs text-slate-600">{`${formatPrice(consumedAmount)} dépensés / ${formatPrice(allowedAmount)}`}</legend>
+        <ProgressBar
+          progress={consumedAmountPercentage}
+          className="max-w-[370px]"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default ConsumptionCard;

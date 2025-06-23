@@ -5,6 +5,12 @@
 
 @import 'tailwindcss';
 
+@layer base {
+  html {
+    @apply text-slate-800;
+  }
+}
+
 @theme {
   /* Font family */
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
