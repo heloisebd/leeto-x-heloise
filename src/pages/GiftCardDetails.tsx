@@ -1,3 +1,4 @@
+import SkeletonLoader from 'components/atoms/SkeletonLoader/SkeletonLoader';
 import TextBanner from 'components/atoms/TextBanner/TextBanner';
 import BeneficiariesCard from 'components/gift-cards/BeneficiariesCard/BeneficiariesCard';
 import ConsumptionByBeneficiaryCard from 'components/gift-cards/ConsumptionByBeneficiaryCard/ConsumptionByBeneficiaryCard';
@@ -39,8 +40,6 @@ const GiftCardDetails = () => {
     };
   }, [giftCard]);
 
-  if (isLoading) return <div className="p-10">Chargement de la carte...</div>;
-
   return (
     <div className="flex flex-col gap-6 p-10">
       <LinkWithIcon
@@ -48,7 +47,20 @@ const GiftCardDetails = () => {
         icon="arrow-left"
         label="Retour vers les cartes cadeaux"
       />
-      {giftCard ? (
+
+      {isLoading ? (
+        <div className="flex flex-col gap-6">
+          <SkeletonLoader height={132} width={400} />
+          <SkeletonLoader height={56} width={470} />
+          <SkeletonLoader height={84} />
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <SkeletonLoader height={216} />
+            <SkeletonLoader height={216} />
+          </div>
+        </div>
+      ) : null}
+
+      {!isLoading && giftCard ? (
         <div className="flex flex-col gap-6">
           <HeaderBlock
             icon="gift-card"
@@ -62,32 +74,35 @@ const GiftCardDetails = () => {
                 : []
             }
           />
+
           <ConsumptionCard
             allowedAmount={giftCard.allowedAmount}
             consumedAmount={giftCard.consumedAmount}
           />
+
           <TextBanner
             title="Description de la carte-cadeau"
             text={giftCard.description}
           />
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {giftCard.beneficiaries.some(
-              ({ type }) =>
-                type === BeneficiaryTypes.COMPANION ||
-                type === BeneficiaryTypes.CHILD,
-            ) ? (
-              <>
-                <BeneficiariesCard beneficiaries={giftCard.beneficiaries} />
-                <ConsumptionByBeneficiaryCard
-                  beneficiaries={giftCard.beneficiaries}
-                />
-              </>
-            ) : null}
-          </div>
+
+          {giftCard.beneficiaries.some(
+            ({ type }) =>
+              type === BeneficiaryTypes.COMPANION ||
+              type === BeneficiaryTypes.CHILD,
+          ) ? (
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <BeneficiariesCard beneficiaries={giftCard.beneficiaries} />
+              <ConsumptionByBeneficiaryCard
+                beneficiaries={giftCard.beneficiaries}
+              />
+            </div>
+          ) : null}
         </div>
-      ) : (
+      ) : null}
+
+      {!isLoading && !giftCard ? (
         <TextBanner text="La carte que vous recherchez n'existe pas" />
-      )}
+      ) : null}
     </div>
   );
 };
