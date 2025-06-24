@@ -1,5 +1,5 @@
-import { type Meta, type StoryObj } from '@storybook/react-vite';
 import Icon from './Icon';
+import { type Meta, type StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<typeof Icon> = {
   title: 'Atoms/Icon',

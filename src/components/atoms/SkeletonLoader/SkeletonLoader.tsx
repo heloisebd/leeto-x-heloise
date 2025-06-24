@@ -16,12 +16,7 @@ const SkeletonLoader: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className={`
-        bg-gray-200 
-        animate-pulse 
-        ${rounded ? 'rounded-md' : ''} 
-        ${className}
-      `}
+      className={`animate-pulse bg-gray-200 ${rounded ? 'rounded-md' : ''} ${className} `}
       style={{ width, height, maxWidth: '100%' }}
       {...rest}
     />

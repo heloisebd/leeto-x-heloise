@@ -1,5 +1,5 @@
-import { type Meta, type StoryObj } from '@storybook/react-vite';
 import DataCard from './DataCard';
+import { type Meta, type StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<typeof DataCard> = {
   title: 'Organisms/DataCard',

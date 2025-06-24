@@ -13,6 +13,7 @@ import { useGiftCard } from 'hooks/useGiftCard';
 import { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { BeneficiaryTypes } from 'types/gift-card/GiftCard';
+
 dayjs.locale('fr');
 dayjs.extend(localizedFormat);
 dayjs.extend(relativeTime);

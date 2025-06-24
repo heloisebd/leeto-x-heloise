@@ -1,5 +1,5 @@
-import { type Meta, type StoryObj } from '@storybook/react-vite';
 import LinkWithIcon from './LinkWithIcon';
+import { type Meta, type StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<typeof LinkWithIcon> = {
   title: 'Molecules/LinkWithIcon',

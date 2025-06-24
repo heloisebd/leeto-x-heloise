@@ -1,5 +1,5 @@
-import { type Meta, type StoryObj } from '@storybook/react-vite';
 import TextBanner from './TextBanner';
+import { type Meta, type StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<typeof TextBanner> = {
   title: 'Atoms/TextBanner',

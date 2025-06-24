@@ -1,5 +1,5 @@
-import { type Meta, type StoryObj } from '@storybook/react-vite';
 import BeneficiaryTypeCircle from './BeneficiaryTypeCircle';
+import { type Meta, type StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<typeof BeneficiaryTypeCircle> = {
   title: 'GiftCards/BeneficiariesCard/BeneficiaryTypeCircle',

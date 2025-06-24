@@ -1,5 +1,5 @@
-import { type Meta, type StoryObj } from '@storybook/react-vite';
 import ConsumptionCard from './ConsumptionCard';
+import { type Meta, type StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<typeof ConsumptionCard> = {
   title: 'GiftCards/ConsumptionCard',
