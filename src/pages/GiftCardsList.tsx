@@ -1,5 +1,5 @@
-import TextBanner from '../components/atoms/TextBanner/TextBanner';
-import { useGiftCards } from '../hooks/useGiftCards';
+import TextBanner from 'components/atoms/TextBanner/TextBanner';
+import { useGiftCards } from 'hooks/useGiftCards';
 
 const GiftCardsList = () => {
   const { data: giftCards, isLoading } = useGiftCards();

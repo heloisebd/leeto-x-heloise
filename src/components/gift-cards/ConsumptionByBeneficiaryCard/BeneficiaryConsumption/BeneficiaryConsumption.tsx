@@ -1,10 +1,7 @@
-import {
-  BeneficiaryTypes,
-  type Beneficiary,
-} from '../../../../types/gift-card/GiftCard';
-import formatPrice from '../../../../utils/formatPrice';
-import ProgressBar from '../../../molecules/ProgressBar/ProgressBar';
-import BeneficiaryTypeCircle from '../../BeneficiariesCard/BeneficiaryTypeCircle/BeneficiaryTypeCircle';
+import { BeneficiaryTypes, type Beneficiary } from 'types/gift-card/GiftCard';
+import formatPrice from 'utils/formatPrice';
+import ProgressBar from 'components/molecules/ProgressBar/ProgressBar';
+import BeneficiaryTypeCircle from 'components/gift-cards/BeneficiariesCard/BeneficiaryTypeCircle/BeneficiaryTypeCircle';
 
 interface Props {
   beneficiary: Beneficiary;

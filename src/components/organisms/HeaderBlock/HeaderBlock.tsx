@@ -1,6 +1,6 @@
-import type { IconKey } from '../../atoms/Icon/Icon';
-import Icon from '../../atoms/Icon/Icon';
-import SquaredIcon from '../../molecules/SquaredIcon/SquaredIcon';
+import type { IconKey } from 'components/atoms/Icon/Icon';
+import Icon from 'components/atoms/Icon/Icon';
+import SquaredIcon from 'components/molecules/SquaredIcon/SquaredIcon';
 
 interface Props {
   icon: IconKey;

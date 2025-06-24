@@ -1,5 +1,5 @@
-import type { IconKey } from '../../atoms/Icon/Icon';
-import Icon from '../../atoms/Icon/Icon';
+import type { IconKey } from 'components/atoms/Icon/Icon';
+import Icon from 'components/atoms/Icon/Icon';
 
 interface Props {
   to: string;

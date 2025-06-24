@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Icon, { type IconKey } from '../../atoms/Icon/Icon';
+import Icon, { type IconKey } from 'components/atoms/Icon/Icon';
 
 const colors = {
   pink: 'bg-pink-100 text-pink-800',

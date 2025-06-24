@@ -1,12 +1,12 @@
 import { useParams } from 'react-router-dom';
-import { useGiftCard } from '../hooks/useGiftCard';
-import LinkWithIcon from '../components/molecules/LinkWithIcon/LinkWithIcon';
-import TextBanner from '../components/atoms/TextBanner/TextBanner';
-import HeaderBlock from '../components/organisms/HeaderBlock/HeaderBlock';
-import ConsumptionCard from '../components/gift-cards/ConsumptionCard/ConsumptionCard';
-import BeneficiariesCard from '../components/gift-cards/BeneficiariesCard/BeneficiariesCard';
-import ConsumptionByBeneficiaryCard from '../components/gift-cards/ConsumptionByBeneficiaryCard/ConsumptionByBeneficiaryCard';
-import { BeneficiaryTypes } from '../types/gift-card/GiftCard';
+import { useGiftCard } from 'hooks/useGiftCard';
+import LinkWithIcon from 'components/molecules/LinkWithIcon/LinkWithIcon';
+import TextBanner from 'components/atoms/TextBanner/TextBanner';
+import HeaderBlock from 'components/organisms/HeaderBlock/HeaderBlock';
+import ConsumptionCard from 'components/gift-cards/ConsumptionCard/ConsumptionCard';
+import BeneficiariesCard from 'components/gift-cards/BeneficiariesCard/BeneficiariesCard';
+import ConsumptionByBeneficiaryCard from 'components/gift-cards/ConsumptionByBeneficiaryCard/ConsumptionByBeneficiaryCard';
+import { BeneficiaryTypes } from 'types/gift-card/GiftCard';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/fr';

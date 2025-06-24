@@ -1,4 +1,4 @@
-import Icon, { iconsMap, type IconKey } from '../components/atoms/Icon/Icon';
+import Icon, { iconsMap, type IconKey } from 'components/atoms/Icon/Icon';
 
 const IconsList = () => (
   <div className="flex flex-wrap gap-4">

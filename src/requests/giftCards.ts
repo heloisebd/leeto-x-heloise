@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { GiftCard } from '../types/gift-card/GiftCard';
+import type { GiftCard } from 'types/gift-card/GiftCard';
 
 const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 

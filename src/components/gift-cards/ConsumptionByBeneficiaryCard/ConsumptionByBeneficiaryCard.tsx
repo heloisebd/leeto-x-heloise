@@ -1,6 +1,6 @@
-import type { Beneficiary } from '../../../types/gift-card/GiftCard';
-import DataCard from '../../organisms/DataCard/DataCard';
-import BeneficiaryConsumption from './BeneficiaryConsumption/BeneficiaryConsumption';
+import type { Beneficiary } from 'types/gift-card/GiftCard';
+import DataCard from 'components/organisms/DataCard/DataCard';
+import BeneficiaryConsumption from 'components/gift-cards/ConsumptionByBeneficiaryCard/BeneficiaryConsumption/BeneficiaryConsumption';
 
 interface Props {
   beneficiaries: Array<Beneficiary>;

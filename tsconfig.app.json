@@ -21,7 +21,17 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "design-tokens/*": ["src/design-tokens/*"],
+      "hooks/*": ["src/hooks/*"],
+      "requests/*": ["src/requests/*"],
+      "types/*": ["src/types/*"],
+      "utils/*": ["src/utils/*"]
+    }
   },
   "include": ["src"]
 }

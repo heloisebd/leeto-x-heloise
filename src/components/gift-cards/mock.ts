@@ -1,4 +1,4 @@
-import { BeneficiaryTypes } from '../../types/gift-card/GiftCard';
+import { BeneficiaryTypes } from 'types/gift-card/GiftCard';
 
 export const userMock = {
   id: 1,

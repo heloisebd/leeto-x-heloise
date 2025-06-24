@@ -1,4 +1,4 @@
-import type { Beneficiary } from '../../../../types/gift-card/GiftCard';
+import type { Beneficiary } from 'types/gift-card/GiftCard';
 
 interface Props {
   type: Beneficiary['type'];
