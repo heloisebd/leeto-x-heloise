@@ -6,7 +6,7 @@ const GiftCardsList = () => {
   const { data: giftCards, isLoading } = useGiftCards();
 
   return (
-    <div className="flex flex-col gap-6 p-10">
+    <div className="flex flex-col gap-6 p-4 sm:p-10">
       <h1 className="text-2xl font-semibold">Cartes cadeaux</h1>
       {isLoading ? (
         <div className="flex flex-col gap-2">

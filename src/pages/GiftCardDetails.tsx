@@ -41,12 +41,14 @@ const GiftCardDetails = () => {
   }, [giftCard]);
 
   return (
-    <div className="flex flex-col gap-6 p-10">
-      <LinkWithIcon
-        to="/"
-        icon="arrow-left"
-        label="Retour vers les cartes cadeaux"
-      />
+    <div className="flex flex-col gap-6 p-4 sm:p-10">
+      <div className="flex">
+        <LinkWithIcon
+          to="/"
+          icon="arrow-left"
+          label="Retour vers les cartes cadeaux"
+        />
+      </div>
 
       {isLoading ? (
         <div className="flex flex-col gap-6">

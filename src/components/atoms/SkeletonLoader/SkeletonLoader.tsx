@@ -22,7 +22,7 @@ const SkeletonLoader: React.FC<Props> = ({
         ${rounded ? 'rounded-md' : ''} 
         ${className}
       `}
-      style={{ width, height }}
+      style={{ width, height, maxWidth: '100%' }}
       {...rest}
     />
   );

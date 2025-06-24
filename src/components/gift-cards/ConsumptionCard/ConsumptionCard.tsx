@@ -12,7 +12,7 @@ const ConsumptionCard = ({ allowedAmount, consumedAmount }: Props) => {
 
   return (
     <div className="flex items-end gap-6">
-      <div className="flex flex-col gap-1 text-slate-800">
+      <div className="flex flex-col gap-0.5 text-slate-800">
         <span className="text-xl font-semibold sm:text-2xl">
           {formatPrice(remainingAmount)}
         </span>
