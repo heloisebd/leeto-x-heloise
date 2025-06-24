@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import BeneficiaryTypeCircle from 'components/gift-cards/BeneficiariesCard/BeneficiaryTypeCircle/BeneficiaryTypeCircle';
 import DataCard from 'components/organisms/DataCard/DataCard';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { BeneficiaryTypes, type Beneficiary } from 'types/gift-card/GiftCard';
 
 interface Props {
@@ -9,6 +10,8 @@ interface Props {
 }
 
 const BeneficiariesCard = ({ beneficiaries = [] }: Props) => {
+  const { t } = useTranslation('gift-cards');
+
   const { hasUser, hasCompanion, hasChild, typesCount } = useMemo(() => {
     const { hasSomeUser, hasSomeCompanion, hasSomeChild } =
       beneficiaries.reduce(
@@ -38,35 +41,40 @@ const BeneficiariesCard = ({ beneficiaries = [] }: Props) => {
   }, [beneficiaries]);
 
   const beneficiariesNames = useMemo(() => {
-    const displayedNames = beneficiaries.map((beneficiary) => {
-      return beneficiary.type === BeneficiaryTypes.USER
-        ? 'Vous-même'
-        : beneficiary.firstName;
-    });
+    const displayedNames = beneficiaries.map((beneficiary) =>
+      beneficiary.type === BeneficiaryTypes.USER
+        ? t('eligibility.you')
+        : beneficiary.firstName,
+    );
+
+    const joinNames = (names: string[]) => {
+      if (names.length === 1) return names[0];
+      return (
+        names.slice(0, -1).join(', ') +
+        ` ${t('common.and')} ` +
+        names[names.length - 1]
+      );
+    };
 
     if (displayedNames.length === 1) {
-      return `${displayedNames[0]} est éligible.`;
-    }
-    if (displayedNames.length === 2) {
-      if (hasUser) {
-        return `${displayedNames.join(' et ')} êtes éligibles.`;
-      }
-      return `${displayedNames.join(' et ')} sont éligibles.`;
+      return t('eligibility.single', { name: displayedNames[0] });
     }
 
-    const all = displayedNames.slice(0, -1).join(', ');
-    const last = displayedNames[displayedNames.length - 1];
-    if (hasUser) {
-      return `${all} et ${last} êtes éligibles.`;
+    const namesString = joinNames(displayedNames);
+
+    if (displayedNames.length === 2) {
+      return hasUser
+        ? t('eligibility.two.withYou', { names: namesString })
+        : t('eligibility.two.withoutYou', { names: namesString });
     }
-    return `${all} et ${last} sont éligibles.`;
+
+    return hasUser
+      ? t('eligibility.multiple.withYou', { names: namesString })
+      : t('eligibility.multiple.withoutYou', { names: namesString });
   }, [beneficiaries, hasUser]);
 
   return (
-    <DataCard
-      title="Quel(s) ayant(s)-droit validés bénéficient de cette cagnotte ?"
-      icon="family"
-    >
+    <DataCard title={t('beneficiaries.wichBenefitFrom')} icon="family">
       <div className="flex items-center gap-4">
         <div
           className="flex"

@@ -1,13 +1,15 @@
 import SkeletonLoader from 'components/atoms/SkeletonLoader/SkeletonLoader';
 import TextBanner from 'components/atoms/TextBanner/TextBanner';
 import { useGiftCards } from 'hooks/useGiftCards';
+import { useTranslation } from 'react-i18next';
 
 const GiftCardsList = () => {
+  const { t } = useTranslation('gift-cards');
   const { data: giftCards, isLoading } = useGiftCards();
 
   return (
     <div className="flex flex-col gap-6 p-4 sm:p-10">
-      <h1 className="text-2xl font-semibold">Cartes cadeaux</h1>
+      <h1 className="text-2xl font-semibold">{t('giftCards')}</h1>
       {isLoading ? (
         <div className="flex flex-col gap-2">
           {Array(7)

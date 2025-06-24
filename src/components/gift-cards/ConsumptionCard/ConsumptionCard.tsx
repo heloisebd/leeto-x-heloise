@@ -1,4 +1,5 @@
 import ProgressBar from 'components/molecules/ProgressBar/ProgressBar';
+import { useTranslation } from 'react-i18next';
 import formatPrice from 'utils/formatPrice';
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const ConsumptionCard = ({ allowedAmount, consumedAmount }: Props) => {
+  const { t } = useTranslation('gift-cards');
   const remainingAmount = Math.max(allowedAmount - consumedAmount, 0);
   const consumedAmountPercentage = (consumedAmount * 100) / allowedAmount;
 
@@ -16,10 +18,15 @@ const ConsumptionCard = ({ allowedAmount, consumedAmount }: Props) => {
         <span className="text-xl font-semibold sm:text-2xl">
           {formatPrice(remainingAmount)}
         </span>
-        <span className="text-xs font-medium sm:text-sm">disponibles</span>
+        <span className="text-xs font-medium sm:text-sm">{t('available')}</span>
       </div>
       <div className="flex flex-auto flex-col gap-2">
-        <legend className="text-xs text-slate-600">{`${formatPrice(consumedAmount)} dépensés / ${formatPrice(allowedAmount)}`}</legend>
+        <legend className="text-xs text-slate-600">
+          {t('consumedOnAllowed', {
+            consumed: formatPrice(consumedAmount),
+            allowed: formatPrice(allowedAmount),
+          })}
+        </legend>
         <ProgressBar
           progress={consumedAmountPercentage}
           className="max-w-[370px]"

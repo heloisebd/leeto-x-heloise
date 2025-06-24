@@ -1,0 +1,28 @@
+{
+  "available": "disponibles",
+  "backToCardsList": "Retour vers les cartes cadeaux",
+  "beneficiaries": {
+    "wichBenefitFrom": "Quel(s) ayant(s)-droit validés bénéficient de cette cagnotte ?",
+    "consumptionTracking": "Suivi de consommation"
+  },
+  "closedCard": "Carte clôturée",
+  "cardClosing": "Se clotûre {{delay}}",
+  "cardDescription": "Description de la carte-cadeau",
+  "common": {
+    "and": "et"
+  },
+  "consumedOnAllowed": "{{consumed}} dépensés / {{allowed}}",
+  "eligibility": {
+    "you": "Vous-même",
+    "single": "{{name}} est éligible.",
+    "two": {
+      "withYou": "{{names}} êtes éligibles.",
+      "withoutYou": "{{names}} sont éligibles."
+    },
+    "multiple": {
+      "withYou": "{{names}} êtes éligibles.",
+      "withoutYou": "{{names}} sont éligibles."
+    }
+  },
+  "giftCards": "Cartes cadeaux"
+}

@@ -10,15 +10,18 @@ import 'dayjs/locale/fr';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { useGiftCard } from 'hooks/useGiftCard';
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { BeneficiaryTypes } from 'types/gift-card/GiftCard';
 
-dayjs.locale('fr');
+dayjs.locale('en');
 dayjs.extend(localizedFormat);
 dayjs.extend(relativeTime);
 
 const GiftCardDetails = () => {
+  const { t, i18n } = useTranslation('gift-cards');
+
   const { id } = useParams<{ id: string }>();
   const { data: giftCard, isLoading } = useGiftCard(
     id ? parseInt(id) : undefined,
@@ -36,19 +39,19 @@ const GiftCardDetails = () => {
     return {
       cardValidityPeriod: `${cardOpeningDate.format('D MMM YYYY')} - ${cardClosingDate.format('D MMM YYYY')}`,
       cardClosingDelay: cardClosingDate.isBefore(now)
-        ? 'Carte clôturée'
-        : `Se clôture ${cardClosingDate.from(now)}`,
+        ? t('closedCard')
+        : t('cardClosing', { delay: cardClosingDate.from(now) }),
     };
   }, [giftCard]);
+
+  useEffect(() => {
+    dayjs.locale(i18n.language);
+  }, [i18n.language]);
 
   return (
     <div className="flex flex-col gap-6 p-4 sm:p-10">
       <div className="flex">
-        <LinkWithIcon
-          to="/"
-          icon="arrow-left"
-          label="Retour vers les cartes cadeaux"
-        />
+        <LinkWithIcon to="/" icon="arrow-left" label={t('backToCardsList')} />
       </div>
 
       {isLoading ? (
@@ -84,7 +87,7 @@ const GiftCardDetails = () => {
           />
 
           <TextBanner
-            title="Description de la carte-cadeau"
+            title={t('cardDescription')}
             text={giftCard.description}
           />
 

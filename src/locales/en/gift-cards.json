@@ -1,0 +1,28 @@
+{
+  "available": "available",
+  "backToCardsList": "Back to gift cards",
+  "beneficiaries": {
+    "wichBenefitFrom": "Which validated beneficiary(ies) benefit from this fund?",
+    "consumptionTracking": "Consumption tracking"
+  },
+  "closedCard": "Closed card",
+  "cardClosing": "Closes {{delay}}",
+  "cardDescription": "Gift card description",
+  "common": {
+    "and": "and"
+  },
+  "consumedOnAllowed": "{{consumed}} spent / {{allowed}}",
+  "eligibility": {
+    "you": "Yourself",
+    "single": "{{name}} is eligible.",
+    "two": {
+      "withYou": "{{names}} are eligible.",
+      "withoutYou": "{{names}} are eligible."
+    },
+    "multiple": {
+      "withYou": "{{names}} are eligible.",
+      "withoutYou": "{{names}} are eligible."
+    }
+  },
+  "giftCards": "Gift cards"
+}

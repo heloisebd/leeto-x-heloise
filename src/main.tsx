@@ -1,3 +1,4 @@
+import '../i18n';
 import App from './App.tsx';
 import './index.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
