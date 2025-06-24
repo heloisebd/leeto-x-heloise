@@ -71,7 +71,7 @@ const BeneficiariesCard = ({ beneficiaries = [] }: Props) => {
     return hasUser
       ? t('eligibility.multiple.withYou', { names: namesString })
       : t('eligibility.multiple.withoutYou', { names: namesString });
-  }, [beneficiaries, hasUser]);
+  }, [beneficiaries, hasUser, t]);
 
   return (
     <DataCard title={t('beneficiaries.wichBenefitFrom')} icon="family">

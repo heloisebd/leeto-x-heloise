@@ -42,7 +42,7 @@ const GiftCardDetails = () => {
         ? t('closedCard')
         : t('cardClosing', { delay: cardClosingDate.from(now) }),
     };
-  }, [giftCard]);
+  }, [giftCard, t]);
 
   useEffect(() => {
     dayjs.locale(i18n.language);
