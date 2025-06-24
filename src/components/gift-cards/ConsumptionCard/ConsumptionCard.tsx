@@ -1,5 +1,5 @@
-import formatPrice from 'utils/formatPrice';
 import ProgressBar from 'components/molecules/ProgressBar/ProgressBar';
+import formatPrice from 'utils/formatPrice';
 
 interface Props {
   allowedAmount: number;

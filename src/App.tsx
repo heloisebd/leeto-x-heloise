@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import GiftCardsList from './pages/GiftCardsList';
 import GiftCardDetails from './pages/GiftCardDetails';
+import GiftCardsList from './pages/GiftCardsList';
 
 function App() {
   return (

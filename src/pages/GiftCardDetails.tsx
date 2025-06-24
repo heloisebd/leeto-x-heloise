@@ -1,18 +1,17 @@
-import { useParams } from 'react-router-dom';
-import { useGiftCard } from 'hooks/useGiftCard';
-import LinkWithIcon from 'components/molecules/LinkWithIcon/LinkWithIcon';
 import TextBanner from 'components/atoms/TextBanner/TextBanner';
-import HeaderBlock from 'components/organisms/HeaderBlock/HeaderBlock';
-import ConsumptionCard from 'components/gift-cards/ConsumptionCard/ConsumptionCard';
 import BeneficiariesCard from 'components/gift-cards/BeneficiariesCard/BeneficiariesCard';
 import ConsumptionByBeneficiaryCard from 'components/gift-cards/ConsumptionByBeneficiaryCard/ConsumptionByBeneficiaryCard';
-import { BeneficiaryTypes } from 'types/gift-card/GiftCard';
-
+import ConsumptionCard from 'components/gift-cards/ConsumptionCard/ConsumptionCard';
+import LinkWithIcon from 'components/molecules/LinkWithIcon/LinkWithIcon';
+import HeaderBlock from 'components/organisms/HeaderBlock/HeaderBlock';
 import dayjs from 'dayjs';
 import 'dayjs/locale/fr';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
 import relativeTime from 'dayjs/plugin/relativeTime';
+import { useGiftCard } from 'hooks/useGiftCard';
 import { useMemo } from 'react';
+import { useParams } from 'react-router-dom';
+import { BeneficiaryTypes } from 'types/gift-card/GiftCard';
 dayjs.locale('fr');
 dayjs.extend(localizedFormat);
 dayjs.extend(relativeTime);

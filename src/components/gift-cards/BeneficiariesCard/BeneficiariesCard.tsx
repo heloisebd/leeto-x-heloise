@@ -1,8 +1,8 @@
+import classNames from 'classnames';
+import BeneficiaryTypeCircle from 'components/gift-cards/BeneficiariesCard/BeneficiaryTypeCircle/BeneficiaryTypeCircle';
+import DataCard from 'components/organisms/DataCard/DataCard';
 import { useMemo } from 'react';
 import { BeneficiaryTypes, type Beneficiary } from 'types/gift-card/GiftCard';
-import BeneficiaryTypeCircle from 'components/gift-cards/BeneficiariesCard/BeneficiaryTypeCircle/BeneficiaryTypeCircle';
-import classNames from 'classnames';
-import DataCard from 'components/organisms/DataCard/DataCard';
 
 interface Props {
   beneficiaries: Array<Beneficiary>;

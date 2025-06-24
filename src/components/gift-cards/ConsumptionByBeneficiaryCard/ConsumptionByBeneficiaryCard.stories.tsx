@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite';
-import ConsumptionByBeneficiaryCard from './ConsumptionByBeneficiaryCard';
 import { childMock, companionMock, userMock } from '../mock';
+import ConsumptionByBeneficiaryCard from './ConsumptionByBeneficiaryCard';
 
 const meta: Meta<typeof ConsumptionByBeneficiaryCard> = {
   title: 'GiftCards/ConsumptionByBeneficiaryCard',

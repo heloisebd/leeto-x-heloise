@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
 import type { IconKey } from 'components/atoms/Icon/Icon';
 import SquaredIcon from 'components/molecules/SquaredIcon/SquaredIcon';
+import type { ReactNode } from 'react';
 
 interface Props {
   icon: IconKey;
